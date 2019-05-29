@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simply Responsive</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+        <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            padding: 10px;
+        }
+        .general {
+            outline: 1px solid rgb(206, 193, 158);
+            margin-bottom: 10px;
+            padding: 5px;
+            font-family: sans-serif;
+        }
+        .queries {
+            background-color: rgb(179, 179, 179);
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+        .blurb {
+            background-color: rgb(204, 204, 204);
+            font-size: 15px;
+        }
+        .view1, .view2, .view3 {
+            background-color: rgb(255, 255, 154);
+            font-size: 15px;
+        }
+        @media only screen and (max-width:480px){
+            .view3 {
+                display: block;
+            }
+            .view1 {
+                display: none;
+            }
+            .view2 {
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 481px){
+            .view2 {
+                display: block;
+            }
+            .view1 {
+                display: none;
+            }
+            .view3 {
+                display: none;
+            }
+        }
+        @media only screen and (min-width: 1024px){
+            .view1 {
+                display: block;
+            }
+            .view2 {
+                display: none;
+            }
+            .view3 {
+                display: none;
+            }
+        }
+        </style>
+        <div class="container">
+            <div class="queries general">@media queries</div>
+            <div class="blurb general">CSS uses the @media rule to detect information about the device being used to access the website. For example, it can be used to detect the size of the device, its capabilities, and its orientation. For this course, we will be using it to detect the device size, but keep in mind that it is capable of much more.</div>
+            <div class="view1 general">Desktop: Width greater than or equal to 1024px</div>
+            <div class="view2 general">Tablet: Width between 481px and 1023px</div>
+            <div class="view3 general">Phone: Width less than or equal to 480px</div>
+        </div>
+    </body>
+</html>
